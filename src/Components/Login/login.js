@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 class Label extends React.Component {
     render() {
         var labelStyle = {
@@ -70,6 +71,7 @@ function Login() {
             .then((data) => {
                 if (data.exist === true) {
                     setSuccess(true);
+                    sessionStorage.setItem("user", JSON.stringify(data.data));
                     //setIsLogged(true);
                 } else {
                     alert("Your email or password is not valid");
@@ -77,6 +79,14 @@ function Login() {
                 }
             });
     };
+
+    const userStored = sessionStorage.getItem("user");
+
+    if (userStored) {
+        return (
+            <Navigate to="/home" />
+        )
+    }
     return (
         <>
             {success ? (
@@ -88,11 +98,6 @@ function Login() {
                         <Card color="Your Login has been successful." />
                         <br></br>
 
-                        <Link to={"/jobs"}>
-                            <button type="submit" className="btn btn-primary">
-                                Go to Jobs Page
-                            </button>
-                        </Link>
                         <br></br>
                         <br></br>
                     </div>

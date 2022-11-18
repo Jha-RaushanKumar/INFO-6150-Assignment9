@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Navigate } from 'react-router-dom';
 
 class Label extends React.Component {
     render() {
@@ -67,6 +67,11 @@ export class Jobs extends Component {
         const items = this.state.toDoList.map((items) =>
             <li>{items}</li>
         )
+        if (!sessionStorage.getItem("user")) {
+            return (
+                <Navigate to="/" />
+            )
+        }
         return (
             <div className='contact'>
 

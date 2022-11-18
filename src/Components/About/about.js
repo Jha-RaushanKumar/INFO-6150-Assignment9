@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Navigate } from 'react-router-dom';
 
 class Label extends React.Component {
     render() {
@@ -18,6 +18,7 @@ class Label extends React.Component {
 
 class Card extends React.Component {
     render() {
+
         var cardStyle = {
             height: 170,
             width: 690,
@@ -26,7 +27,11 @@ class Card extends React.Component {
             WebkitFilter: "drop-shadow(0px 0px 5px #666)",
             filter: "drop-shadow(0px 0px 5px #666)"
         };
-
+        if (!sessionStorage.getItem("user")) {
+            return (
+                <Navigate to="/" />
+            )
+        }
         return (
             <div style={cardStyle}>
                 <Label color={this.props.color} />

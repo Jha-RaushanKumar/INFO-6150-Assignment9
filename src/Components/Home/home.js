@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Navigate } from 'react-router-dom';
 
 class Label extends React.Component {
     render() {
@@ -36,6 +36,8 @@ class Card extends React.Component {
 }
 
 export class Home extends Component {
+
+
     constructor(props) {
         super(props);
 
@@ -43,8 +45,17 @@ export class Home extends Component {
             auth: 0,
         };
     }
-    loginHandler = () => { };
+
+
+
+
+
     render() {
+        if (!sessionStorage.getItem("user")) {
+            return (
+                <Navigate to="/" />
+            )
+        }
         return (
             <div className='contact'>
                 <div className='contactdetails'>

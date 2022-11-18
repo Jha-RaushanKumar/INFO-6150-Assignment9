@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-
+import { Navigate } from 'react-router-dom';
 class Label extends React.Component {
     render() {
         var labelStyle = {
@@ -37,6 +37,11 @@ class Card extends React.Component {
 
 export class Contact extends Component {
     render() {
+        if (!sessionStorage.getItem("user")) {
+            return (
+                <Navigate to="/" />
+            )
+        }
         return (
             <div className='contact'>
                 <div className='contactdetails'>
