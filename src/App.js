@@ -6,12 +6,12 @@ import About from "./Components/About/about";
 import Home from "./Components/Home/home";
 import Contact from "./Components/Contact/contact";
 import Jobs from "./Components/Jobs/jobs";
-import NavBar from "./Components/NavBar/navbar"
+import NavBar from "./Components/NavBar/navbar";
+import LoginSuccess from "./Components/Login/loginsuccess"
 function App() {
 
   return (
     <Router>
-
       <NavBar />
       <br></br>
       <div className="pages">
@@ -21,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/" element={<Login />}></Route>
           <Route path="/jobs" element={<Jobs />}></Route>
+          <Route path="/loginsuccess" element={<LoginSuccess />}></Route>
         </Routes>
       </div>
     </Router>

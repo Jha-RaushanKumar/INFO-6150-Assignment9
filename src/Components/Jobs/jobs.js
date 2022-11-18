@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Navigate } from 'react-router-dom';
-
+import { Navigate, Route } from 'react-router-dom';
+import NavBar from '../NavBar/navbar';
 class Label extends React.Component {
     render() {
         var labelStyle = {
@@ -72,6 +72,8 @@ export class Jobs extends Component {
                 <Navigate to="/" />
             )
         }
+
+
         return (
             <div className='contact'>
 

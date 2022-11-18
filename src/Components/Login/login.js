@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
+import NavBar from '../NavBar/navbar';
 class Label extends React.Component {
     render() {
         var labelStyle = {
@@ -82,15 +83,13 @@ function Login() {
 
     const userStored = sessionStorage.getItem("user");
 
-    if (userStored) {
-        return (
-            <Navigate to="/home" />
-        )
-    }
+
     return (
         <>
             {success ? (
+
                 <div className="panel">
+
                     <h1 id='success'>Login Success</h1>
                     <br></br>
                     <div className='panel2'>
