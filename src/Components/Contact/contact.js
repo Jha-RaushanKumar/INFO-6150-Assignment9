@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import NavBar from '../NavBar/navbar';
 import { Navigate } from 'react-router-dom';
 class Label extends React.Component {
     render() {
@@ -43,7 +43,10 @@ export class Contact extends Component {
             )
         }
         return (
+
             <div className='contact'>
+                <NavBar />
+                <br></br><br></br><br></br><br></br><br></br><br></br>
                 <div className='contactdetails'>
                     <br></br>
                     Contact Details :

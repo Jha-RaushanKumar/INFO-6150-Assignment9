@@ -88,24 +88,32 @@ function Login() {
         <>
             {success ? (
 
-                <div className="panel">
-
-                    <h1 id='success'>Login Success</h1>
+                <div>
+                    <NavBar />
                     <br></br>
-                    <div className='panel2'>
-                        <br></br>
-                        <Card color="Your Login has been successful." />
-                        <br></br>
+                    <br></br>
+                    <br></br>
+                    <div className="panel">
 
+                        <h1 id='success'>Login Success</h1>
                         <br></br>
-                        <br></br>
+                        <div className='panel2'>
+                            <br></br>
+                            <Card color="Your Login has been successful." />
+                            <br></br>
+
+                            <br></br>
+                            <br></br>
+                        </div>
+
                     </div>
-
                 </div>
             ) : (
                 <div className="panel4">
                     <form onSubmit={handleSubmit}>
                         <br></br>
+                        <br></br>
+                        <br></br><br></br><br></br><br></br>
                         <br></br>
                         <div className='panel3'>
                             <br></br>

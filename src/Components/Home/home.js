@@ -57,23 +57,28 @@ export class Home extends Component {
                 <Navigate to="/" />
             )
         }
-        <NavBar />
         return (
 
-            <div className='contact'>
-                <div className='contactdetails'>
+            <div>
+                <NavBar />
+                <br></br><br></br><br></br><br></br>
+                <div className='contact'>
+
+                    <br></br><br></br><br></br>
+                    <div className='contactdetails'>
+                        <br></br>
+                        Welcome!!!!
+                        <br></br>
+                        <br></br>
+                    </div>
                     <br></br>
-                    Welcome!!!!
                     <br></br>
                     <br></br>
-                </div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <div className='contactdetails1'>
-                    <br></br>
-                    <Card color="This is the home page for Job select." />
-                    <br></br>
+                    <div className='contactdetails1'>
+                        <br></br>
+                        <Card color="This is the home page for Job select." />
+                        <br></br>
+                    </div>
                 </div>
             </div>
         )

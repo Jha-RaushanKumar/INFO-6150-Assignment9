@@ -8,11 +8,11 @@ import Contact from "./Components/Contact/contact";
 import Jobs from "./Components/Jobs/jobs";
 import NavBar from "./Components/NavBar/navbar";
 import LoginSuccess from "./Components/Login/loginsuccess"
+import NavBarLogin from "./Components/NavBar/navbarlogin";
 function App() {
 
   return (
     <Router>
-      <NavBar />
       <br></br>
       <div className="pages">
         <Routes>

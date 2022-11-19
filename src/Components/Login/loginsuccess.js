@@ -88,6 +88,7 @@ function LoginSuccess() {
 
         <div className="panel">
             <NavBar />
+            <br></br><br></br><br></br><br></br>
             <h1 id='success'>Login Success</h1>
             <br></br>
             <div className='panel2'>

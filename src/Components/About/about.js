@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navigate } from 'react-router-dom';
-
+import NavBar from '../NavBar/navbar';
 class Label extends React.Component {
     render() {
         var labelStyle = {
@@ -44,6 +44,8 @@ export class About extends Component {
     render() {
         return (
             <div className='contact'>
+                <NavBar />
+                <br></br><br></br><br></br><br></br><br></br><br></br>
                 <div className='contactdetails6'>
                     <br></br>
                     Hi There!!

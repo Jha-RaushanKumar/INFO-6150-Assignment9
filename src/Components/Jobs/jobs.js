@@ -76,7 +76,8 @@ export class Jobs extends Component {
 
         return (
             <div className='contact'>
-
+                <NavBar />
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <div className='contactdetails'>
                     <textarea
                         onChange={this.handleChange}
